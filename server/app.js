@@ -16,7 +16,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
-const API_KEY = '8a8456fb20509385a7067764250e5b00';
+const API_KEY = process.env.API_KEY;
 
 app.get('/weather/:location/:units', async (req, res) => {
     try {
